@@ -22,20 +22,24 @@ class Motocicleta():
              print('El motor ha arrancado, ruge como un león.')
         else:
             print('Se escuha un molesto sonido al girar la llave, el motor ya estaba en marcha')
+
     def detener(self):
         if self.motor != False:
             self.motor = False
             print('El motor se ha detenido.')
         else:
             print('El motor ya estaba detenido.')
+
     def consulta_precio(self):
         print(f'El precio de la motocicleta {self.marca} {self.modelo} es de {self.precio}')
+
     def consultar_litros(self):
         print(f'--->REPORTE DE DEPÓSITO DE {self.marca} {self.modelo}<---')
         print(f'El depósito tiene {self.combustible_litros}.')
         print(f'La capacidad máxima del tanque de combustible es de {self.capacidad}')
         print(f'Faltan {self.capacidad - self.combustible_litros} para llenar el depósito.')
         print('--->FIN DEL REPORTE<---')
+        
     def repostar(self):
         litros_repostados = int(input('Por favor, introduzca los litros que desea repostar:\n'))
         while (litros_repostados + self.combustible_litros) > self.capacidad:
